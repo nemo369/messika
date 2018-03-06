@@ -8,13 +8,14 @@ new Vue({
         let min = time.getMinutes();
         min > 10 ? min = min : min = '0' + min;
     this.time = time.getHours() + ':' + min
+    this.genrateQuote()
   },
   data() {
     return {
       date: "23.2.14",
       time: "00:00",
       title: this.getTitle(),
-      quote: this.genrateQuote(),
+      quote: '',
       img: `img/messika-${Math.floor(Math.random() *5)}.jpg`
     };
   },
@@ -56,7 +57,7 @@ new Vue({
         famous: rnd(famousPerson),
         hashtag: rnd(hashTag)
       }      
-      return text
+      this.quote = text
     }
   }
 }).$mount("#app");
