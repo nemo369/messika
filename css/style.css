@@ -37,6 +37,7 @@ main {
     max-width: 600px;
     margin: 0 auto;
     text-align: right;
+    
 }
 
 .quote {
@@ -45,6 +46,8 @@ main {
     padding: 50px;
         padding-bottom: 50px;
     padding-bottom: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 0 6px     
+    
 }
 
 .quote blockquote {
@@ -62,14 +65,20 @@ main {
     display: flex;
     flex-direction: row-reverse
 }
-.media img {
+.main img {
     float: left;
-    margin-right: 10px;
-    width: 50px;
-    height: 50px;
+    width: 250px;
+    height: 250px;
     border-radius: 100%;
 }
-
+.media::after{
+    content: '';
+    clear: both;
+}
+.main::after{
+    content: '';
+    clear: both;
+}
 .titles{
     display: flex;
     flex-direction: column;
@@ -91,4 +100,51 @@ main {
 h1{
     text-align: center;
     margin-top: 130px;
+    padding: 10px;
+    font-weight: 100;
+		color: #777;
+}
+.share{
+    margin-top:250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px 
+}
+.fb-share-button{
+    padding: 1em;
+    
+}
+
+ button{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    background: dodgerblue;
+    padding: 1em;
+    border-radius: 50%;
+    border: none;
+    align-self: center;
+    margin: 5px 50%;
+    cursor: pointer;
+}
+
+footer{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-around;
+    align-items: center;
+    background: whitesmoke;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+}
+footer img{
+    width: 10%;
+    position: relative;
 }
