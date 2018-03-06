@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+      <link rel="stylesheet" href="css/style.css">
+    <title>new Tab</title>
+  </head>
+  <body>
+<div id="app">
+    <div class="date-wrpaer">
+        <p class="date">{{date}}</p>
+        <p class="time">{{time}}</p>
+    </div>
+    <main>
+        <h1>Messika-Bot</h1>
+        <section class="quote">
+            <blockquote>{{quote.main}}</blockquote>
+            <p class="tag">@{{quote.famous}}</p>
+            <p class="hastag">{{quote.hashtag}}#</p>
+            <div class="media">
+                <div class="titles">
+                    <p>Adi Messika</p>
+                    <h6>{{title}}</h6>
+                </div>
+                <img :src="img" alt="Adi Messika">
+            </div>
+        </section>
+    </main>
+</div>
+    
+    <script src="lib/vue.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
